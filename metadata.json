@@ -1,0 +1,6 @@
+{
+  "name": "Remote Desktop Console",
+  "description": "A high-performance Remote Desktop client simulation with live WebRTC screen sharing, dirty-rectangles encoding visualizer, and virtual interactive OS environment.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

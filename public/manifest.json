@@ -1,0 +1,21 @@
+{
+  "short_name": "RustDeskLite",
+  "name": "RustDesk Lite - High-Performance Remote Desktop",
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=192&h=192&fit=crop&q=80",
+      "type": "image/jpeg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=512&h=512&fit=crop&q=80",
+      "type": "image/jpeg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0A0B0E",
+  "theme_color": "#111318",
+  "display": "standalone",
+  "orientation": "any"
+}
