@@ -5,11 +5,13 @@ import { NetworkMetrics } from "../types";
 interface RealScreenShareProps {
   onMetricsUpdate: (updater: (prev: NetworkMetrics) => NetworkMetrics) => void;
   onInputEvent: (type: "click" | "move" | "keydown" | "scroll" | "drag", detail: string, dataSize: number) => void;
+  onStreamReady?: (stream: MediaStream) => void;
 }
 
 export const RealScreenShare: React.FC<RealScreenShareProps> = ({
   onMetricsUpdate,
   onInputEvent,
+  onStreamReady,
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -46,6 +48,7 @@ export const RealScreenShare: React.FC<RealScreenShareProps> = ({
         videoRef.current.play().catch(e => console.error("Video play error:", e));
       }
 
+      onStreamReady?.(mediaStream);
       onInputEvent("click", "Real Screen Capture stream initialized.", 24);
     } catch (err: any) {
       console.error("Screen capture initialization failed:", err);
